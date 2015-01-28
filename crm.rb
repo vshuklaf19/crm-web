@@ -1,6 +1,7 @@
 require './rolodex'
 require './contact'
 require 'sinatra'
+require 'sinatra/reloader'
 
 $rolodex= Rolodex.new
 
@@ -12,10 +13,12 @@ get '/' do
 end
 
 get '/contacts' do
+  @title = "Contacts Page"
   erb :contacts
   end
 
 get '/contacts/new' do
+  @title = "Add a new contact"
   erb :new_contact
 end
 

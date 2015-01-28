@@ -1,8 +1,12 @@
 <h1>Add a new contact</h1>
 <form action="/contacts" method="post">
-  <input type="text" name="first_name">
-  <input type="text" name="last_name">
-  <input type="text" name="email">
-  <input type="text" name="note">
-  <input type="submit" name="Submit">
+  <% %w[first_name last_name email note].each do |field| %>
+  <div>
+    <label>
+      <span class="desc"><%= field.gsub("_", " ").capitalize %>:</span> 
+      <input type="text" name="<%= field %>">
+    </label>
+  </div>
+  <% end %>
+  <div><input type="submit" name="Submit"></div>
 </form>

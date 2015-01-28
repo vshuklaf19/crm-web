@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> @title </title>
+  <title> <%= @title %> </title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
+
 <body>
-  <%= yield %>
+  <div id="container">
+  <header>
+    <h1>NYC Skydive's CRM App</h1>
+    <h3>Current time: <%= Time.now.ctime %></h3>
+
+    <nav>
+      <p>Main menu</p>
+      <ul>
+        <li><a href="/contacts">View all contacts</a></li>
+        <li><a href="/contacts/new">Add a new contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer>
+      <p>Vivek Shukla Graphics &copy; 2015 </p>
+  </footer>
+
+  </div>
+
 </body>
 </html>
