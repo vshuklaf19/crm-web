@@ -5,6 +5,8 @@
   <li><%= contact.first_name %> 
       <%= contact.last_name %>
       <%= contact.email %>
-      <%= contact.note %></li>
+      <%= contact.note %>
+      <a href="/contacts/<%= contact.id %>">View Profile</a>
+  </li>
 <% end %>
 </ul>
