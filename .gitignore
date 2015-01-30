@@ -1,0 +1,5 @@
+#Files that will be ignored when I use - 'git push' onto github repository.
+#Ignore the default SQLite DB
+
+/*.sqlite3
+/*.sqlite3-journal
